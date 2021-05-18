@@ -1,1 +1,13 @@
-<h2>This is create posts</h2>
+<textarea rows=6 [value]="newPost"></textarea>
+<hr>
+<button (click)="onAddPost()">Save Post</button>
+<p>{{newPost}}</p>
+<textarea rows=6 [value]="newPostWithData" #inputPost></textarea>
+<hr>
+<button (click)="onAddPostwithData(inputPost)">Save Post</button>
+<p>{{newPostWithData}}</p>
+<textarea rows=6 [(ngModel)]="douleBinding" ></textarea>
+<hr>
+<button (click)="onDoubleBinding()">Save Post</button>
+<p>{{douleBinding}}</p>
+
