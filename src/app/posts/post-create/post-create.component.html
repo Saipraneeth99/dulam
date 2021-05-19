@@ -2,7 +2,7 @@
 <hr>
 <button (click)="onAddPost()">Save Post</button>
 <p>{{newPost}}</p>
-<textarea rows=6 value={{newPostWithData}} #inputPost></textarea>
+<textarea rows=6 [value]="newPostWithData" #inputPost></textarea>
 <hr>
 <button (click)="onAddPostwithData(inputPost)">Save Post</button>
 <p>{{newPostWithData}}</p>
@@ -10,4 +10,3 @@
 <hr>
 <button (click)="onDoubleBinding()">Save Post</button>
 <p>{{douleBinding}}</p>
-
