@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-post-create',
@@ -6,21 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./post-create.component.css']
 })
 export class PostCreateComponent{
-  newPost='No content'
-  newPostWithData=''
-  douleBinding=''
+  enteredTitle=''
+  enteredContent=''
+  @Output() postCreated=new EventEmitter();
   onAddPost()
   {
-    this.newPost='User\'s post'
-    alert("Post added")
+    const post={
+      title: this.enteredTitle,
+      content: this.enteredContent
+    };
+    this.postCreated.emit(post);
   }
-  onAddPostwithData(inputPost : HTMLTextAreaElement)
-  {
-    this.newPostWithData=inputPost.value;
-  }
-  onDoubleBinding()
-  {
-    //console.log(this.douleBinding)
-  }
+  // onAddPostwithData(inputPost : HTMLTextAreaElement)
+  // {
+
+  // }
+  // onDoubleBinding()
+  // {
+  //   //console.log(this.douleBinding)
+  // }
 
 }

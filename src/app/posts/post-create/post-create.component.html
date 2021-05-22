@@ -1,9 +1,12 @@
 <mat-card>
   <mat-form-field >
-    <textarea matInput  rows=6 [(ngModel)]="douleBinding" ></textarea>
+    <input matInput  type="text" [(ngModel)]="enteredTitle" >
+  </mat-form-field>
+  <mat-form-field >
+    <textarea matInput  rows=6 [(ngModel)]="enteredContent" ></textarea>
   </mat-form-field>
   <br>
-  <button mat-raised-button color="accent"  (click)="onDoubleBinding()">Save Post</button>
-  <p>{{douleBinding}}</p>
+  <button mat-raised-button color="accent"  (click)="onAddPost()">Save Post</button>
+
 </mat-card>
 
